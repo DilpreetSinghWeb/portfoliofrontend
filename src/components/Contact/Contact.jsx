@@ -89,7 +89,7 @@ const Contact = () => {
               </span>
             </div>
           </div>
-          <button className="btn" onClick={alert("Submitting your response")}>SUBMIT</button>
+          <button className="btn" >SUBMIT</button>
         </form>
       </div>
     </div>
