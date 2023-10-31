@@ -1,7 +1,7 @@
 import "./projects.css";
 // import "./../../main.css";
 import LaunchIcon from "@mui/icons-material/Launch";
-import projects_Photo from "../../images/octavian-dan-b21Ty33CqVs-unsplash.jpg";
+import projects_Photo from "../../images/Frame 8.png";
 import portfolio from "../../images/portfolio.png";
 import speed_wheels from "../../images/speedWheels.png";
 import ramen_shop from "../../images/ramenShop.png";
@@ -39,7 +39,9 @@ const Projects = () => {
                 </p>
               </div>
               <p>
-              I've crafted my portfolio website highlighting my web development projects and personal info, integrating both frontend and backend expertise.
+                I've crafted my portfolio website highlighting my web
+                development projects and personal info, integrating both
+                frontend and backend expertise.
               </p>
               <div className="projects_container_box_text_lng ">
                 <div className="language">
@@ -62,10 +64,12 @@ const Projects = () => {
                 </div>
               </div>
               <div>
-                <button className="button">
-                  Preview
-                  <LaunchIcon style={{ fontSize: "1rem" }} />
-                </button>
+                <a href="https://dilpreetsinghportfolio.onrender.com">
+                  <button className="button">
+                    Preview
+                    <LaunchIcon style={{ fontSize: "1rem" }} />
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -82,10 +86,14 @@ const Projects = () => {
                 }}
               >
                 <h3>Speed Wheels</h3>
-                <p className="fw_500" style={{ textDecoration: "underline" }}>Frontend Project</p>
+                <p className="fw_500" style={{ textDecoration: "underline" }}>
+                  Frontend Project
+                </p>
               </div>
               <p>
-              I've built 'Speed Wheels,' a React-based car collection website with a unique, eye-catching user interface for an exceptional browsing experience.
+                I've built 'Speed Wheels,' a React-based car collection website
+                with a unique, eye-catching user interface for an exceptional
+                browsing experience.
               </p>
               <div className="projects_container_box_text_lng ">
                 <div className="language">
@@ -102,10 +110,16 @@ const Projects = () => {
                 </div>
               </div>
               <div>
-                <button className="button">
-                  Preview
-                  <LaunchIcon style={{ fontSize: "1rem" }} />
-                </button>
+                <a
+                  href="https://dilpreetsinghweb.github.io/SpeedWheels/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <button className="button">
+                    Preview
+                    <LaunchIcon style={{ fontSize: "1rem" }} />
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -122,10 +136,14 @@ const Projects = () => {
                 }}
               >
                 <h3>Ramen Shop</h3>
-                <p className="fw_500" style={{ textDecoration: "underline" }}>Frontend Project</p>
+                <p className="fw_500" style={{ textDecoration: "underline" }}>
+                  Frontend Project
+                </p>
               </div>
               <p>
-              I've created "The Ramen Shop" website using HTML, CSS, and JS, showcasing dishes, services, and interactive maps for an engaging experience.
+                I've created "The Ramen Shop" website using HTML, CSS, and JS,
+                showcasing dishes, services, and interactive maps for an
+                engaging experience.
               </p>
               <div className="projects_container_box_text_lng ">
                 <div className="language">
@@ -136,10 +154,16 @@ const Projects = () => {
                 </div>
               </div>
               <div>
-                <button className="button">
-                  Preview
-                  <LaunchIcon style={{ fontSize: "1rem" }} />
-                </button>
+                <a
+                  href="https://dilpreetsinghweb.github.io/TheRamenShop/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <button className="button">
+                    Preview
+                    <LaunchIcon style={{ fontSize: "1rem" }} />
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -161,7 +185,9 @@ const Projects = () => {
                 </p>
               </div>
               <p>
-              I've built "Blogosphere," a secure website with MongoDB integration for user data storage, featuring validated login/registration and a user-friendly blog interface.
+                I've built "Blogosphere," a secure website with MongoDB
+                integration for user data storage, featuring validated
+                login/registration and a user-friendly blog interface.
               </p>
               <div className="projects_container_box_text_lng ">
                 <div className="language">
@@ -190,10 +216,16 @@ const Projects = () => {
                 </div>
               </div>
               <div>
-                <button className="button">
-                 <a href="https://blogosphere-uiag.onrender.com" target="_blank" >Preview</a> 
-                  <LaunchIcon style={{ fontSize: "1rem" }} />
-                </button>
+                <a
+                  href="https://blogosphere-uiag.onrender.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <button className="button">
+                    Preview
+                    <LaunchIcon style={{ fontSize: "1rem" }} />
+                  </button>
+                </a>
               </div>
             </div>
           </div>

@@ -34,7 +34,7 @@ const Contact = () => {
     }
   };
   return (
-    <div className="contact" id="contact">
+    <div className="contact" id="need_a_website">
       <div className="heading">
       <h1><span style={{color:"#FE3838"}}>need a</span> <span style ={{color:"#fff"}}>website</span></h1>
       </div>

@@ -66,7 +66,7 @@ const Navbar = () => {
                 <a
                   className={`${menuOpen ? "open" : ""}`}
                   onClick={handleMenuClick}
-                  href="#info"
+                  href="#projects"
                 >
                   Projects
                 </a>
@@ -75,7 +75,7 @@ const Navbar = () => {
                 <a
                   className={`${menuOpen ? "open" : ""}`}
                   onClick={handleMenuClick}
-                  href="#projects"
+                  href="#need_a_website"
                 >
                   Need a website
                 </a>
@@ -84,7 +84,7 @@ const Navbar = () => {
                 <a
                   className={`${menuOpen ? "open" : ""}`}
                   onClick={handleMenuClick}
-                  href="#about"
+                  href="#footer"
                 >
                   Contact
                 </a>
