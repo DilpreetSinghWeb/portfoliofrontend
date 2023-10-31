@@ -82,14 +82,14 @@ const Contact = () => {
                 id="textarea"
                 placeholder="Enter Info Here"
                 onChange = {event => setMessage(event.target.value)}
-                onClick={alert("Submitting your response")}
+                
               ></textarea>
               <span className="textarea_span">
                 <Comment />
               </span>
             </div>
           </div>
-          <button className="btn">SUBMIT</button>
+          <button className="btn" onClick={alert("Submitting your response")}>SUBMIT</button>
         </form>
       </div>
     </div>
