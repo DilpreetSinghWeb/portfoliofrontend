@@ -5,10 +5,9 @@ import { Toaster, toast } from 'react-hot-toast';
 import axios from 'axios'; // Import axios
 
 // Constants for messages
-const LOGIN_ERROR_MSG = 'Enter valid username and password';
 const FETCH_ERROR_MSG = 'Failed to fetch user data';
 const ADMIN_MESSAGE = 'Only for Admin';
-const API_URL = 'http://localhost:5000/dashboard';
+const API_URL = 'https://dilpreetsinghportfolio-api.onrender.com/dashboard';
 
 const Dashboard = () => {
   const [username, setUsername] = useState('');

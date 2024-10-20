@@ -23,7 +23,7 @@ const Form = () => {
     setLoading(true); 
 
     try {
-      const response = await axios.post('http://localhost:5000', formData);
+      const response = await axios.post('https://dilpreetsinghportfolio-api.onrender.com', formData);
       toast.success(response.data.msg);
       setFormData({ username: '', email: '', message: '' }); 
     } catch (error) {
