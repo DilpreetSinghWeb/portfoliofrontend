@@ -100,21 +100,3 @@ input:-internal-autofill-selected {
   -webkit-text-fill-color: #ffffff;
   transition: background-color 5000s ease-in-out 0s;
 }
-.btn {
-    width: 40%;
-    padding: 14px 0;
-  text-align: center;
-  color: rgba(10, 10, 10,.6);
-  font-weight: 800;
-  cursor: pointer;
-    border: 2px solid rgb(255, 255, 255,80%);
-    background-color: rgb(255, 255, 255,80%);
-    border-radius: 6px;
-    font-size: 19px;
-    transition: .3s;
-    letter-spacing: .2rem;
-  }
-.btn:hover {
-    box-shadow: 8px 8px rgb(255, 255, 255,30%);
-    transition: .3s;
-  }

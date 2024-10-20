@@ -1,236 +1,98 @@
 import "./projects.css";
-// import "./../../main.css";
 import LaunchIcon from "@mui/icons-material/Launch";
-import projects_Photo from "../../images/Frame 8.png";
-import portfolio from "../../images/portfolio.png";
-import speed_wheels from "../../images/speedWheels.png";
-import ramen_shop from "../../images/ramenShop.png";
-import blogoSphere from "../../images/blogosphere.png";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
+import { useEffect } from "react";
+import { projectsData } from "../../utils/projectsData";
+
+
 
 const Projects = () => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    threshold: 0.05,
+    triggerOnce: true,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.8 },
+      });
+    
+    }
+  }, [controls, inView]);
+
   return (
-    <div className="projects ">
-      <div className="projects_container" id="projects">
-        <div className="heading">
-          <h1>
-            <span style={{ color: "#FE3838" }}>proj</span>{" "}
-            <span style={{ color: "#1a1a1a" }}>ects</span>
-          </h1>
-        </div>
-        <div className="projects_container_boxes">
-          <div className="projects_container_box projects_image_box">
-            <img src={projects_Photo} alt="All_Projects_img" />
+    <div className="projects">
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 50 }}
+        animate={controls}
+      >
+        <div className="projects_container" id="projects">
+          <div className="heading">
+            <h1>
+              <span style={{ color: "#FE3838" }}>proj</span>{" "}
+              <span style={{ color: "var(--color-text)" }}>ects</span>
+            </h1>
           </div>
-          <div className="projects_container_box content-box">
-            <div className="projects_container_box_img">
-              <img src={portfolio} alt="Portfolio" />
-            </div>
-            <div className="projects_container_box_text">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}
-              >
-                <h3>My Portfolio </h3>
-                <p className="fw_500" style={{ textDecoration: "underline" }}>
-                  Full Stack Project
-                </p>
-              </div>
-              <p>
-                I've crafted my portfolio website highlighting my web
-                development projects and personal info, integrating both
-                frontend and backend expertise.
-              </p>
-              <div className="projects_container_box_text_lng ">
-                <div className="language">
-                  <div className="circle"></div>
-                  <p>
-                    <b>REACT</b>
-                  </p>
+          <div className="projects_container_boxes">
+            {projectsData.map((project, index) => (
+              <div className="projects_container_box content-box" key={index}>
+                <div className="projects_container_box_img_container">
+                  <div className="projects_container_box_img">
+                    <img src={project.image} alt={project.title} />
+                  </div>
+                  <div className="projects_container_project_img_content">
+                    <h3>Tech Stack👩🏻‍💻</h3>
+                    <div className="flex_align_justify_center">
+                      {project.tech.map((icon, index) => (
+                        <h4 className="flex_align_justify_center" key={index}>
+                          {icon}
+                        </h4>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                <div className="language ">
-                  <div className="circle"></div>
-                  <p>
-                    <b>NODEJS</b>
-                  </p>
-                </div>
-                <div className="language ">
-                  <div className="circle"></div>
-                  <p>
-                    <b>MONGODB</b>
-                  </p>
-                </div>
-              </div>
-              <div>
-                <a href="https://dilpreetsinghportfolio.onrender.com">
-                  <button className="button">
-                    Preview
-                    <LaunchIcon style={{ fontSize: "1rem" }} />
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="projects_container_box content-box">
-            <div className="projects_container_box_img">
-              <img src={speed_wheels} alt="Speed_wheels_second_project_img" />
-            </div>
-            <div className="projects_container_box_text">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}
-              >
-                <h3>Speed Wheels</h3>
-                <p className="fw_500" style={{ textDecoration: "underline" }}>
-                  Frontend Project
-                </p>
-              </div>
-              <p>
-                I've built 'Speed Wheels,' a React-based car collection website
-                with a unique, eye-catching user interface for an exceptional
-                browsing experience.
-              </p>
-              <div className="projects_container_box_text_lng ">
-                <div className="language">
-                  <div className="circle"></div>
-                  <p>
-                    <b>HTML | CSS | JS </b>
-                  </p>
-                </div>
-                <div className="language ">
-                  <div className="circle"></div>
-                  <p>
-                    <b>REACT</b>
-                  </p>
+                <div className="projects_container_box_text">
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    <h3 style={{ color: "var(--color-primary)" }}>
+                      {project.title}
+                    </h3>
+                    <span
+                      className="fw_400 projects_container_box_text_type"
+                      style={{ textDecoration: "underline" }}
+                    >
+                      {project.type}
+                    </span>
+                  </div>
+
+                  <p className="projects_container_box_description">{project.description}</p>
+
+                  <div>
+                    <button className="project_btn">
+                      <a href={project.link} target="_blank" rel="noreferrer">
+                        Preview
+                      <LaunchIcon size={25} />
+                      </a>
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div>
-                <a
-                  href="https://dilpreetsinghweb.github.io/SpeedWheels/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <button className="button">
-                    Preview
-                    <LaunchIcon style={{ fontSize: "1rem" }} />
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="projects_container_box content-box">
-            <div className="projects_container_box_img">
-              <img src={ramen_shop} alt="" />
-            </div>
-            <div className="projects_container_box_text">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}
-              >
-                <h3>Ramen Shop</h3>
-                <p className="fw_500" style={{ textDecoration: "underline" }}>
-                  Frontend Project
-                </p>
-              </div>
-              <p>
-                I've created "The Ramen Shop" website using HTML, CSS, and JS,
-                showcasing dishes, services, and interactive maps for an
-                engaging experience.
-              </p>
-              <div className="projects_container_box_text_lng ">
-                <div className="language">
-                  <div className="circle"></div>
-                  <p>
-                    <b>HTML | CSS | JS</b>
-                  </p>
-                </div>
-              </div>
-              <div>
-                <a
-                  href="https://dilpreetsinghweb.github.io/TheRamenShop/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <button className="button">
-                    Preview
-                    <LaunchIcon style={{ fontSize: "1rem" }} />
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="projects_container_box content-box">
-            <div className="projects_container_box_img">
-              <img src={blogoSphere} alt="" />
-            </div>
-            <div className="projects_container_box_text">
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                }}
-              >
-                <h3>BlogoSphere</h3>
-                <p className="fw_500" style={{ textDecoration: "underline" }}>
-                  Full Stack Project
-                </p>
-              </div>
-              <p>
-                I've built "Blogosphere," a secure website with MongoDB
-                integration for user data storage, featuring validated
-                login/registration and a user-friendly blog interface.
-              </p>
-              <div className="projects_container_box_text_lng ">
-                <div className="language">
-                  <div className="circle"></div>
-                  <p>
-                    <b>HTML | CSS | JS</b>
-                  </p>
-                </div>
-                <div className="language ">
-                  <div className="circle"></div>
-                  <p>
-                    <b>EXPRESSJS (Nodejs)</b>
-                  </p>
-                </div>
-                <div className="language ">
-                  <div className="circle"></div>
-                  <p>
-                    <b>MONGODB</b>
-                  </p>
-                </div>
-                <div className="language ">
-                  <div className="circle"></div>
-                  <p>
-                    <b>EJS</b>
-                  </p>
-                </div>
-              </div>
-              <div>
-                <a
-                  href="https://blogosphere-uiag.onrender.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <button className="button">
-                    Preview
-                    <LaunchIcon style={{ fontSize: "1rem" }} />
-                  </button>
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

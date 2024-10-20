@@ -1,20 +1,50 @@
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
 :root{
+  --white:white;
 
-  --color-primary:#1a1a1a;
+  --color-primary:#333;
+  --color-background: #F9F9F9;
+  --color-text:#666;
+  --color-lighter-text:#DDDDDD;
   --color-secondary:#FA3838;
+  --color-white-bg:#f9f9f9;
 
+  
+  
 
+  
+
+  --color-hero-text:#C5C5C5;
+  --color-h2:#7D7D7D;
+
+  --fw-200:200;
+  --fw-300:300;
+  --fw-400:400;
   --fw-500:500;
+  --fw-600:600;
+  --fw-700:700;
 
   
   --gap-1: 1rem;
   --gap-2: 2rem;
   --gap-3: 3rem;
 }
+.fw_200{
+  font-weight: 200;
+}
+.fw_300{
+  font-weight: 300;
+}
+.fw_400{
+  font-weight: 400;
+}
 .fw_500{
   font-weight: 500;
 }
-
+.fw_600{
+  font-weight: 600;
+}
 .color-secondary{
   color: var(--color-secondary);
 }
@@ -23,16 +53,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 }
-
-.hero_container {
-  --max-width: 900px;
-  --padding: 1.2rem;
+.hero_container{
+  --max-width: 850px;
+  --padding: .3rem;
   width: min(var(--max-width), 100% - (var(--padding) * 2));
   margin: auto;
 }
 
-.projects_container,.footer_container {
+.projects_container,.footer_top_container,.expertise_container,.skills_container,.footer_bottom {
   --max-width: 1300px;
   --padding: 1rem;
   width: min(var(--max-width), 100% - (var(--padding) * 2));
@@ -63,23 +93,31 @@ img {
 }
 h1 {
   color: #1a1a1a;
-  font-family: 'Stylish', sans-serif;
-  font-size: 2rem;
   text-transform: uppercase;
-  letter-spacing: 4px;
   text-align: center;
-  font-weight: 800;
+}
+h2{
+  font-size: 45px;
+}
+h3{
+  font-size: 20px;
+  color: #7D7D7D;
 }
 p{
-  color: #1a1a1a;
-  font-size: clamp(.85rem,3vw,.9rem);
-  line-height: 1.7;
-  letter-spacing: .3px;
-  font-weight: 600;
+  font-size: 16px;
+  
+  color: var(--color-primary);
 }
-@media screen and (max-width:900px) {
-  h1 {
-    font-size: 1.7rem;
+
+@media screen and (max-width:500px) {
+  h2{
+    font-size: 30px;
+  }
+  h3{
+    font-size: 18px;
+  }
+  p{
+    font-size: 14px;
   }
 }
 .heading{
@@ -105,7 +143,8 @@ p{
 }
 .heading h1::after{
   bottom: -15px;
-  background-color: #1a1a1a;
+  background-color: var(--color-text);
   right: 0;
 }
+
 

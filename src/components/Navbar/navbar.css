@@ -11,7 +11,6 @@
     color:white;
 }
 .navbar_container{
-    /* height: 80px; */
     display: flex;
     align-items:center;
     justify-content: space-between;
@@ -48,12 +47,11 @@ li{
     justify-content: center;
 }
 .navbar_container_items li{
-    letter-spacing: 2px;
-    font-size: 14px;
+    font-size: 16px;
     margin-left:2rem;
 }
 .navbar_container_items li a{
-    text-transform: uppercase;
+    text-transform: capitalize;
     color:inherit;
     padding: 5px 0;
 }

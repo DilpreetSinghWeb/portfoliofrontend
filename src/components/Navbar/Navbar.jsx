@@ -3,7 +3,7 @@ import "./navbar.css";
 import { Close, MenuSharp } from "@mui/icons-material";
 import webLogo from "../../images/mainLogo.png";
 const Navbar = () => {
-  const [navbarMaxWidth, setNavbarMaxWidth] = useState("900px");
+  const [navbarMaxWidth, setNavbarMaxWidth] = useState("850px");
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -14,13 +14,14 @@ const Navbar = () => {
         window.pageYOffset || document.documentElement.scrollTop;
         
       if (scrollHeight > scrollHeightThreshold) {
-        navbar_bg.style.background = "rgba(13, 13, 13, 0.95) ";
+        navbar_bg.style.background = "linear-gradient(135deg, #1a1a1a, #2e2e2e)";
+        // navbar_bg.style.background = "var(--color-text)"
         navbar_bg.style.color = "white";
         setNavbarMaxWidth("1300px");
       } else {
         navbar_bg.style.background = "transparent";
         navbar_bg.style.color = "#fff";
-        setNavbarMaxWidth("900px");
+        setNavbarMaxWidth("850px");
       }
     };
 
@@ -62,6 +63,15 @@ const Navbar = () => {
           </div>
           <div className={`navbar_container_items ${menuOpen ? "open" : ""}`}>
             <ul>
+            <li>
+                <a
+                  className={`${menuOpen ? "open" : ""}`}
+                  onClick={handleMenuClick}
+                  href="#skills"
+                >
+                  Skills
+                </a>
+              </li>
               <li>
                 <a
                   className={`${menuOpen ? "open" : ""}`}
@@ -71,15 +81,7 @@ const Navbar = () => {
                   Projects
                 </a>
               </li>
-              <li>
-                <a
-                  className={`${menuOpen ? "open" : ""}`}
-                  onClick={handleMenuClick}
-                  href="#need_a_website"
-                >
-                  Need a website
-                </a>
-              </li>
+              
               <li>
                 <a
                   className={`${menuOpen ? "open" : ""}`}
