@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  padding: 40px 10% 200px;
+  padding: 40px 10% 220px;
   overflow: hidden;
   position: relative;
   background: linear-gradient(to right, #1a1a1a, #2e2e2e);
@@ -63,7 +63,7 @@
 
 @media screen and (max-width: 900px) {
   .hero {
-    padding: 60px 5px 150px;
+    padding: 60px 5px 210px;
   }
   .hero_container {
     text-align: center;
@@ -73,6 +73,11 @@
   .hero img {
     width: 250px;
     height: 250px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero {
+    padding: 60px 5px 170px;
   }
 }
 

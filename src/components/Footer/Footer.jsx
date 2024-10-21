@@ -109,7 +109,8 @@ const Footer = () => {
               </div>
               <div className="footer_bottom_right_content_single">
                 <FaLinkedin size={22} />
-                <a href="/">Dilpreet Singh[LinkedIn]</a>
+                <a target="_blank" href="https://www.linkedin.com/in/dilpreet-singh65" rel="noopener noreferrer">Dilpreet Singh [LinkedIn]</a>
+
               </div>
             </div>
           </div>

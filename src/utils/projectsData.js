@@ -2,13 +2,13 @@
 import portfolio from "../images/portfolio.png";
 import speed_wheels from "../images/speedWheels.png";
 import ramen_shop from "../images/ramenShop.png";
-import blogoSphere from "../images/blogosphere.png";
+import UserAuthOTP from "../images/UserAuthOTP.png";
 import doctor from "../images/doctor.png";
 import blogWebsite from "../images/blogWebsite.png";
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import { DiMongodb, DiNodejs } from "react-icons/di";
 import { TiCss3, TiHtml5 } from "react-icons/ti";
-import { RiJavascriptFill, RiTailwindCssFill } from "react-icons/ri";
+import { RiJavascriptFill, RiNodejsLine, RiTailwindCssFill } from "react-icons/ri";
 import { SiEjs, SiExpress, SiStripe } from "react-icons/si";
 export const projectsData = [
     {
@@ -39,12 +39,12 @@ export const projectsData = [
       type: "Frontend Project",
     },
     {
-      title: "BlogoSphere",
+      title: "User Auth",
       description:
-        "'Blogosphere' integrates MongoDB for user data, featuring secure login/registration and a user-friendly blog interface.",
-      image: blogoSphere,
-      tech: [<RiTailwindCssFill size={20} />, <SiExpress size={20} />, <DiMongodb size={20} />, <SiEjs size={20} />],
-      link: "https://blogosphere-uiag.onrender.com",
+        "User Auth is a secure system for login, register, and password recovery, using UserAuthOTP for verification to protect user data.",
+      image: UserAuthOTP,
+      tech: [<RiTailwindCssFill size={20} />, <SiExpress size={20} />, <DiMongodb size={20} />, <RiNodejsLine size={20} />],
+      link: "https://userauthotp.onrender.com/login",
       type: "Full Stack Project",
     },
     {

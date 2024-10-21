@@ -50,7 +50,7 @@ const Hero = () => {
             <p className=" fw_400" >
             I develop impressive websites with excellent quality through persistent effort, learning, and artistic flair.
             </p>
-              <button className="hero_btn | btn"><a href="/">Download CV</a></button>
+              <button className="hero_btn | btn"><a href="/cv.pdf" download> Download CV</a></button>
             
           </div>
           <div className="hero_container_img">
